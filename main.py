@@ -1,4 +1,8 @@
 from turtle import Turtle, Screen
+from user_paddle import Paddle
+
+#paddle
+user_paddle = Paddle()
 
 # screen setup
 screen = Screen()
@@ -15,5 +19,8 @@ for x in range(27):
     screen_setup_turtle.forward(10)
     screen_setup_turtle.penup()
     screen_setup_turtle.forward(20)
+#screen setup
+
+
 
 screen.exitonclick()
