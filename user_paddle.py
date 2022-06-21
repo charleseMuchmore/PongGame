@@ -1,6 +1,8 @@
 from turtle import Turtle
 STARTING_POSITIONS = [(-300, 40), (-300, 20), (-300, 0), (-300, -20), (-300, -40)]
 NUM_PADDLE_PIECES = 5
+
+
 class Paddle(Turtle):
 
     def __init__(self):
@@ -27,24 +29,3 @@ class Paddle(Turtle):
     def print_paddle_pieces(self):
         """prints the list of turtle objects that make up the user paddle"""
         print(f"turd list: {self.paddle_pieces}")
-
-
-
-    # def __init__(self):
-    #     self.segments = []
-    #     self.initialize_snake()
-    #     self.head = self.segments[0]
-    #     self.head.color("green")
-    #
-    #
-    # def initialize_snake(self):
-    #     for position in STARTING_POSITIONS:
-    #         self.add_segment(position)
-    #
-    # def add_segment(self, position):
-    #     new_segment = Turtle("square")
-    #     new_segment.color("white")
-    #     new_segment.penup()
-    #     new_segment.goto(position)
-    #     new_segment.speed("slowest")
-    #     self.segments.append(new_segment)
