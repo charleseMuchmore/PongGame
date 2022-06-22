@@ -3,7 +3,7 @@ STARTING_POSITIONS = [(-300, 40), (-300, 20), (-300, 0), (-300, -20), (-300, -40
 NUM_PADDLE_PIECES = 5
 
 
-class Paddle(Turtle):
+class UserPaddle(Turtle):
 
     def __init__(self):
         super().__init__()

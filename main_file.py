@@ -1,8 +1,10 @@
 from turtle import Turtle, Screen
-from user_paddle import Paddle
+from paddle import Paddle
 
 #paddle
-user_paddle = Paddle()
+paddle = Paddle()
+paddle.create_paddle(5, "white")
+paddle.position_paddle(350)
 
 # screen setup
 screen = Screen()
