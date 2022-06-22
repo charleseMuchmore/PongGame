@@ -4,7 +4,7 @@ from paddle import Paddle
 #paddle
 paddle = Paddle()
 paddle.create_paddle(5, "white")
-paddle.position_paddle(350)
+paddle.position_paddle(-350)
 
 # screen setup
 screen = Screen()
