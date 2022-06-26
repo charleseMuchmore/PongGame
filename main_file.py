@@ -4,7 +4,9 @@ from paddle import Paddle
 #paddle
 paddle = Paddle()
 paddle.create_paddle(5, "white")
-paddle.position_paddle(-350)
+paddle.center_paddle(-350)
+for item in paddle.paddle_pieces:
+    print(f"{item.pos()}")
 
 # screen setup
 screen = Screen()
