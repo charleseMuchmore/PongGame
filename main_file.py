@@ -1,17 +1,26 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
+import time
+from user_paddle import UserPaddle
 
 #paddle
-paddle = Paddle()
-paddle.create_paddle(5, "white")
-paddle.center_paddle(-350)
-for item in paddle.paddle_pieces:
-    print(f"{item.pos()}")
+# paddle1 = Paddle()
+# paddle1.create_paddle(6, "white")
+# paddle1.center_paddle(-350)
+#
+# user_paddle = UserPaddle()
 
-# screen setup
+
+# screen
 screen = Screen()
-screen.tracer(n=0, delay=0)
 screen.bgcolor("black")
+screen.setup(width=800, height=600)
+screen.title("Pong")
+
+user_paddle = UserPaddle()
+
+# setup
+screen.tracer(n=0, delay=0)
 screen_setup_turtle = Turtle()
 screen_setup_turtle.color("white")
 screen_setup_turtle.penup()
@@ -23,7 +32,17 @@ for x in range(27):
     screen_setup_turtle.forward(10)
     screen_setup_turtle.penup()
     screen_setup_turtle.forward(20)
-#screen setup
+
+
+# listening
+screen.listen()
+screen.onkeypress(user_paddle.down, "Down")
+screen.onkeypress(user_paddle.up, "Up")
+screen.tracer(True)
+is_on = True
+#gameloop
+while is_on == True:
+    screen.update()
 
 
 
