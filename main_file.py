@@ -1,6 +1,8 @@
 from turtle import Screen
 from paddle import Paddle
 from screen_setup import ScreenSetup
+from ball import Ball
+import time
 
 screen = Screen()
 screen.bgcolor("black")
@@ -13,6 +15,8 @@ screen_setup_turtle.setup()
 
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
+ball = Ball()
+
 
 screen.listen()
 screen.onkey(r_paddle.down, "Down")
@@ -24,6 +28,12 @@ screen.tracer(True)
 game_is_on = True
 # game loop
 while game_is_on:
+    time.sleep(0.04)
     screen.update()
+    ball.move()
+    print(ball.pos())
+    
+
+
 
 screen.exitonclick()
