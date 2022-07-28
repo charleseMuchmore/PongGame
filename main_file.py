@@ -31,7 +31,11 @@ while game_is_on:
     time.sleep(0.04)
     screen.update()
     ball.move()
-    print(ball.pos())
+    if ball.ycor() > 300 or ball.ycor() < -300:
+        ball.bounce('y')
+    if ball.xcor() > 400 or ball.xcor() < - 400:
+        ball.bounce('x')
+
     
 
 
