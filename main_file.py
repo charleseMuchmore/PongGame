@@ -5,6 +5,15 @@ from ball import Ball
 from scoreboard import Scoreboard
 import time
 
+UPPER_BORDER = 280
+LOWER_BORDER = -280
+PADDLE_RADIUS = 50
+EDGE_R_PADDLE = 320
+EDGE_L_PADDLE = -320
+R_GOAL = 380
+L_GOAL = -380
+
+
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width=800, height=600)
@@ -38,21 +47,19 @@ while game_is_on:
     time.sleep(ball_speed)
     screen.update()
     ball.move()
-    if ball.ycor() > 280 or ball.ycor() < -280:
+    if ball.ycor() > UPPER_BORDER or ball.ycor() < LOWER_BORDER:
         ball.bounce_y()
-    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+    if ball.distance(r_paddle) < PADDLE_RADIUS and ball.xcor() > EDGE_R_PADDLE or ball.distance(l_paddle) < PADDLE_RADIUS and ball.xcor() < EDGE_L_PADDLE:
         ball.bounce_x()
-        ball_speed /= 2
-
-    if ball.xcor() > 380:
+    if ball.xcor() > R_GOAL:
         scoreboard.l_point()
         ball.reset()
         ball.speed_reset()
-    if ball.xcor() < -380:
+    if ball.xcor() < L_GOAL:
         scoreboard.r_point()
         right_player_score += 1
         ball.reset()
-        ball.speed_reset()
+
 
 
 screen.exitonclick()

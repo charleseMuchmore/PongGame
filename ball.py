@@ -21,11 +21,13 @@ class Ball(Turtle):
         
     def bounce_x(self):
         self.xmover *= -1
+        self.move_speed *= 0.9
 
     def reset(self):
         self.hideturtle()
         self.goto(0,0)
         self.bounce_x()
+        self.speed_reset()
         self.showturtle()
 
     def speed_reset(self):
