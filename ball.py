@@ -1,4 +1,3 @@
-from re import U
 from turtle import Turtle
 
 class Ball(Turtle):
@@ -10,7 +9,7 @@ class Ball(Turtle):
         self.penup()
         self.xmover = +10
         self.ymover = +10
-        self.speed = 0.04
+        self.move_speed = 0.04
 
     def move(self):
         new_x = self.xcor() + self.xmover
@@ -30,7 +29,4 @@ class Ball(Turtle):
         self.showturtle()
 
     def speed_reset(self):
-        self.speed = 0.04 
-
-    def speed(self):
-        return(self.speed)
+        self.move_speed = 0.04 

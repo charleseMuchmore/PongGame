@@ -31,7 +31,7 @@ screen.tracer(True)
 left_player_score = 0
 right_player_score = 0
 game_is_on = True
-ball_speed = ball.speed
+ball_speed = ball.move_speed
 print(type(ball_speed))
 # game loop
 while game_is_on:
