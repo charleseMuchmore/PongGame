@@ -17,3 +17,18 @@ class ScreenSetup:
             self.screen_setup_turtle.forward(10)
             self.screen_setup_turtle.penup()
             self.screen_setup_turtle.forward(20)
+
+    def draw_border(self):
+        self.screen_setup_turtle.goto(402, 302)
+        self.screen_setup_turtle.setheading(180)
+        self.screen_setup_turtle.pendown()
+        self.screen_setup_turtle.forward(804)
+        self.screen_setup_turtle.left(90)
+        self.screen_setup_turtle.forward(604)
+        self.screen_setup_turtle.left(90)
+        self.screen_setup_turtle.forward(804)
+        self.screen_setup_turtle.left(90)
+        self.screen_setup_turtle.forward(604)
+        self.screen_setup_turtle.penup()
+        self.screen_setup_turtle.hideturtle()
+        
