@@ -12,6 +12,7 @@ EDGE_R_PADDLE = 320
 EDGE_L_PADDLE = -320
 R_GOAL = 380
 L_GOAL = -380
+PADDLE_DIST_FROM_ZERO = 350
 
 
 screen = Screen()
@@ -24,8 +25,8 @@ screen_setup_turtle = ScreenSetup()
 screen_setup_turtle.setup()
 screen_setup_turtle.draw_border()
 
-r_paddle = Paddle((350, 0))
-l_paddle = Paddle((-350, 0))
+r_paddle = Paddle((PADDLE_DIST_FROM_ZERO, 0))
+l_paddle = Paddle((-PADDLE_DIST_FROM_ZERO, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 
